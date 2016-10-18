@@ -1,0 +1,7 @@
+[package]
+name = "kevent-sys"
+version = "0.1.0"
+authors = ["William Orr <will@worrbase.com>"]
+
+[dependencies]
+libc = "^0.2.17"
