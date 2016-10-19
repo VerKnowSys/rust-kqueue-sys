@@ -1,7 +1,12 @@
 [package]
-name = "kevent-sys"
+name = "kqueue-sys"
 version = "0.1.0"
 authors = ["William Orr <will@worrbase.com>"]
+description = "Low-level kqueue interface for BSDs"
+license = "MIT"
+keywords = ["kqueue", "kevent", "bsd", "no_std", "nostd"]
+repository = "https://gitlab.com/worr/rust-kevent-sys"
+readme = "README.md"
 
 [dependencies]
 bitflags = "^0.7.0"
