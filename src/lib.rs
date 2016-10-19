@@ -60,3 +60,15 @@ extern "C" {
     #[cfg(target_os="netbsd")]
     pub fn kqueue1(flags: c_int) -> c_int;
 }
+
+#[cfg(test)]
+mod test {
+    use super::kqueue;
+
+    #[test]
+    fn test_kqueue() {
+        unsafe {
+            assert!(kqueue() > 0);
+        }
+    }
+}
