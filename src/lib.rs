@@ -5,7 +5,8 @@ extern crate bitflags;
 extern crate libc;
 
 #[allow(unused_imports)]
-use libc::{c_int, uintptr_t, c_short, c_ushort, c_uint, int64_t, intptr_t, uint32_t, c_void, size_t, timespec};
+use libc::{c_int, uintptr_t, c_short, c_ushort, c_uint, int64_t, intptr_t, uint32_t, c_void,
+           size_t, timespec};
 
 pub mod constants;
 
@@ -15,24 +16,24 @@ pub use self::constants::*;
 #[derive(Clone, Copy, Debug)]
 #[repr(C)]
 pub struct kevent {
-    ident: uintptr_t,
-    filter: EventFilter,
-    flags: EventFlag,
-    fflags: FilterFlag,
-    data: int64_t,
-    udata: *mut c_void,
+    pub ident: uintptr_t,
+    pub filter: EventFilter,
+    pub flags: EventFlag,
+    pub fflags: FilterFlag,
+    pub data: int64_t,
+    pub udata: *mut c_void,
 }
 
 #[cfg(target_os="netbsd")]
 #[derive(Clone, Copy, Debug)]
 #[repr(C)]
 pub struct kevent {
-    ident: uintptr_t,
-    filter: EventFilter,
-    flags: EventFlag,
-    fflags: FilterFlag,
-    data: int64_t,
-    udata: intptr_t,
+    pub ident: uintptr_t,
+    pub filter: EventFilter,
+    pub flags: EventFlag,
+    pub fflags: FilterFlag,
+    pub data: int64_t,
+    pub udata: intptr_t,
 }
 
 #[allow(improper_ctypes)]
