@@ -13,6 +13,12 @@ pub mod constants;
 pub use self::constants::*;
 
 #[cfg(not(target_os="netbsd"))]
+pub type EventListSize = c_int;
+
+#[cfg(target_os="netbsd")]
+pub type EventListSize = size_t;
+
+#[cfg(not(target_os="netbsd"))]
 #[derive(Clone, Copy, Debug)]
 #[repr(C)]
 pub struct kevent {
@@ -40,21 +46,11 @@ pub struct kevent {
 extern "C" {
     pub fn kqueue() -> c_int;
 
-    #[cfg(not(target_os="netbsd"))]
     pub fn kevent(kq: c_int,
                   changelist: *const kevent,
-                  nchanges: c_int,
+                  nchanges: EventListSize,
                   eventlist: *mut kevent,
-                  nevents: c_int,
-                  timeout: *const timespec)
-                  -> c_int;
-
-    #[cfg(target_os="netbsd")]
-    pub fn kevent(kq: c_int,
-                  changelist: *const kevent,
-                  nchanges: size_t,
-                  eventlist: *mut kevent,
-                  nevents: size_t,
+                  nevents: EventListSize,
                   timeout: *const timespec)
                   -> c_int;
 
