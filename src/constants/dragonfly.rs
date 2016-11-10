@@ -14,7 +14,7 @@ pub enum EventFilter {
     EVFILT_EXCEPT = -8,
     EVFILT_USER = -9,
     EVFILT_FS = -10,
-    EVFILTER_SYSCOUNT = 10,
+    EVFILT_SYSCOUNT = 10,
 }
 
 bitflags! {

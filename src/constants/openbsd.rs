@@ -11,7 +11,7 @@ pub enum EventFilter {
     EVFILT_PROC = -5,
     EVFILT_SIGNAL = -6,
     EVFILT_TIMER = -7,
-    EVFILTER_SYSCOUNT = 7,
+    EVFILT_SYSCOUNT = 7,
 }
 
 bitflags! {
