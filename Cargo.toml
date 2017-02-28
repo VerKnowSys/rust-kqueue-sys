@@ -1,6 +1,6 @@
 [package]
 name = "kqueue-sys"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["William Orr <will@worrbase.com>"]
 description = "Low-level kqueue interface for BSDs"
 license = "MIT"
