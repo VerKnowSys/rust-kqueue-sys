@@ -5,6 +5,7 @@ authors = ["William Orr <will@worrbase.com>"]
 description = "Low-level kqueue interface for BSDs"
 license = "MIT"
 keywords = ["kqueue", "kevent", "bsd", "no_std", "nostd"]
+categories = ["external-ffi-bindings", "no-std", "os::unix-apis", "filesystem"]
 repository = "https://gitlab.com/worr/rust-kqueue-sys"
 readme = "README.md"
 
