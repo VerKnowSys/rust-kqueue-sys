@@ -8,6 +8,7 @@ keywords = ["kqueue", "kevent", "bsd", "macos", "darwin"]
 categories = ["external-ffi-bindings", "no-std", "os::unix-apis", "filesystem"]
 repository = "https://github.com/VerKnowSys/rust-kqueue-sys"
 readme = "README.md"
+edition = "2018"
 
 [dependencies]
 bitflags = "0.7"
