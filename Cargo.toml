@@ -1,6 +1,6 @@
 [package]
 name = "kqueue2-sys"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["William Orr <will@worrbase.com>", "Daniel (dmilith) Dettlaff <dmilith@me.com>"]
 description = "Low-level kqueue interface for BSDs and MacOS"
 license = "MIT"
